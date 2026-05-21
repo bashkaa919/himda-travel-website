@@ -1,322 +1,240 @@
-export default function HimdaTravelAgencyWebsite() {
-  const services = [
-    {
-      title: "Flight Booking",
-      description: "International and domestic flight reservations with affordable prices and flexible schedules.",
-    },
-    {
-      title: "Visa Assistance",
-      description: "Professional visa processing support for tourism, business, education, and medical travel.",
-    },
-    {
-      title: "Hajj & Umrah",
-      description: "Complete Hajj and Umrah packages including flights, accommodation, and guidance.",
-    },
-    {
-      title: "Hotel Reservation",
-      description: "Book hotels worldwide with comfort, convenience, and best-value pricing.",
-    },
-    {
-      title: "Tour Packages",
-      description: "Customized tour experiences for families, students, companies, and groups.",
-    },
-    {
-      title: "Travel Consultation",
-      description: "Expert travel advice, destination planning, and documentation guidance.",
-    },
-  ];
-
-  const destinations = [
-    "Dubai",
-    "Turkey",
-    "Malaysia",
-    "Saudi Arabia",
-    "Kenya",
-    "Qatar",
-  ];
-
-  const testimonials = [
-    {
-      name: "Ahmed Ali",
-      review:
-        "Himda Travel Agency provided excellent service and helped me secure my visa and ticket quickly.",
-    },
-    {
-      name: "Hodan Hassan",
-      review:
-        "Very professional agency with affordable prices and great customer support.",
-    },
-    {
-      name: "Mohamed Yusuf",
-      review:
-        "Their Hajj package was organized perfectly from beginning to end.",
-    },
-  ];
-
-  return (
-    <div className="bg-white text-gray-800 min-h-screen font-sans">
-      {/* Header */}
-      <header className="bg-blue-950 text-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <div>
-            <h1 className="text-3xl font-bold tracking-wide">HIMDA TRAVEL AGENCY</h1>
-            <p className="text-sm text-blue-200">Somalia</p>
-          </div>
-
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            <a href="#home" className="hover:text-yellow-300">Home</a>
-            <a href="#about" className="hover:text-yellow-300">About</a>
-            <a href="#services" className="hover:text-yellow-300">Services</a>
-            <a href="#destinations" className="hover:text-yellow-300">Destinations</a>
-            <a href="#contact" className="hover:text-yellow-300">Contact</a>
-          </nav>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIMDA Travel Agency</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="HIMDA Travel Agency home">
+          <span class="brand-mark">H</span>
+          <span>
+            <strong>HIMDA</strong>
+            <small>Travel Agency</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#contact">Contact</a>
         </div>
-      </header>
+      </nav>
+    </header>
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="relative bg-cover bg-center h-[90vh] flex items-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-white">
-          <div className="max-w-2xl">
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Your Trusted Travel Partner in Somalia
-            </h2>
-
-            <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-              Himda Travel Agency provides professional travel solutions including flight booking, visa services, Hajj & Umrah packages, hotel reservations, and international tours.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-2xl font-semibold shadow-lg transition">
-                Book Now
-              </button>
-
-              <button className="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-2xl font-semibold transition">
-                Explore Services
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=2069&auto=format&fit=crop"
-              alt="Travel"
-              className="rounded-3xl shadow-2xl"
-            />
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold mb-6 text-blue-950">
-              About Himda Travel Agency
-            </h3>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Himda Travel Agency is a professional travel and tourism company based in Somalia. We are committed to providing high-quality travel services with reliability, affordability, and customer satisfaction.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Our mission is to make travel easier and more accessible for individuals, families, students, and businesses by offering complete travel solutions under one trusted agency.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="bg-white p-6 rounded-2xl shadow">
-                <h4 className="text-3xl font-bold text-blue-950">500+</h4>
-                <p>Successful Travelers</p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow">
-                <h4 className="text-3xl font-bold text-blue-950">24/7</h4>
-                <p>Customer Support</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <h3 className="text-4xl font-bold text-blue-950 mb-4">
-              Our Services
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              We provide comprehensive travel services designed to make your journey smooth, safe, and affordable.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 hover:bg-blue-950 hover:text-white transition p-8 rounded-3xl shadow-lg"
-              >
-                <h4 className="text-2xl font-bold mb-4">{service.title}</h4>
-                <p className="leading-relaxed text-base">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Destinations */}
-      <section id="destinations" className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <h3 className="text-4xl font-bold text-blue-950 mb-4">
-              Popular Destinations
-            </h3>
-            <p className="text-gray-600 text-lg">
-              Travel to the world’s most exciting destinations with Himda Travel Agency.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {destinations.map((destination, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-3xl shadow-xl group"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop"
-                  alt={destination}
-                  className="h-72 w-full object-cover group-hover:scale-110 transition duration-500"
-                />
-
-                <div className="absolute inset-0 bg-black/40 flex items-end p-6">
-                  <h4 className="text-white text-3xl font-bold">
-                    {destination}
-                  </h4>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <h3 className="text-4xl font-bold text-blue-950 mb-4">
-              Client Testimonials
-            </h3>
-            <p className="text-gray-600 text-lg">
-              What our customers say about our services.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-3xl shadow-lg"
-              >
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
-                  “{testimonial.review}”
-                </p>
-
-                <h4 className="font-bold text-xl text-blue-950">
-                  {testimonial.name}
-                </h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-blue-950 text-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <h3 className="text-4xl font-bold mb-6">Contact Us</h3>
-
-            <p className="text-lg text-blue-100 leading-relaxed mb-8">
-              Get in touch with Himda Travel Agency for bookings, travel advice, visa assistance, and customer support.
-            </p>
-
-            <div className="space-y-5 text-lg">
-              <p>📍 Mogadishu, Somalia</p>
-              <p>📞 +252 61 0000000</p>
-              <p>✉️ info@himdatravel.com</p>
-              <p>🌐 www.himdatravel.com</p>
-            </div>
-          </div>
-
-          <div className="bg-white text-black p-8 rounded-3xl shadow-2xl">
-            <h4 className="text-2xl font-bold mb-6">Send a Message</h4>
-
-            <form className="space-y-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border border-gray-300 rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-900"
-              />
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-300 rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-900"
-              />
-
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="w-full border border-gray-300 rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-900"
-              />
-
-              <textarea
-                rows="5"
-                placeholder="Your Message"
-                className="w-full border border-gray-300 rounded-2xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-900"
-              ></textarea>
-
-              <button className="bg-blue-950 hover:bg-blue-800 text-white px-6 py-3 rounded-2xl font-semibold w-full transition">
-                Submit Inquiry
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-gray-400 py-8 text-center">
-        <div className="max-w-7xl mx-auto px-6">
-          <h4 className="text-2xl font-bold text-white mb-3">
-            HIMDA TRAVEL AGENCY
-          </h4>
-
-          <p className="mb-4">
-            Professional Travel & Tourism Services in Somalia
+    <main>
+      <section class="hero" aria-label="Travel booking introduction">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Mogadishu based travel experts</p>
+          <h1>Your trusted partner for flights, visas, Hajj, Umrah and global tours.</h1>
+          <p>
+            HIMDA Travel Agency helps families, professionals, students and pilgrims plan smooth,
+            well-supported journeys from Somalia to the world.
           </p>
-
-          <div className="flex justify-center gap-6 mb-4 text-sm">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-            <a href="#">WhatsApp</a>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Book Now</a>
+            <a class="btn secondary" href="#services">Explore Services</a>
           </div>
-
-          <p className="text-sm">
-            © 2026 Himda Travel Agency. All Rights Reserved.
-          </p>
         </div>
-      </footer>
-    </div>
-  );
-}
+        <div class="hero-panel" aria-label="Quick booking highlights">
+          <span>500+ Travelers</span>
+          <span>24/7 Support</span>
+          <span>Visa Guidance</span>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About us</p>
+          <h2>Professional travel planning with personal care.</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p>
+              HIMDA Travel Agency provides reliable travel services for customers who need clear
+              guidance, fast coordination and dependable support before, during and after travel.
+            </p>
+            <p>
+              Our mission is to make international travel easier through honest consultation,
+              accurate documentation support and carefully selected travel options.
+            </p>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>500+</strong>
+              <span>Travelers served</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Customer support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Everything you need for a confident trip.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Flight Booking</h3>
+            <p>Compare routes, timings and fares with booking support from start to finish.</p>
+          </article>
+          <article class="service-card">
+            <span>02</span>
+            <h3>Visa Assistance</h3>
+            <p>Document checklists, application guidance and appointment preparation.</p>
+          </article>
+          <article class="service-card">
+            <span>03</span>
+            <h3>Hajj &amp; Umrah</h3>
+            <p>Organized pilgrimage travel support for flights, hotels and ground arrangements.</p>
+          </article>
+          <article class="service-card">
+            <span>04</span>
+            <h3>Hotel Reservation</h3>
+            <p>Comfortable hotel options selected around your budget, location and schedule.</p>
+          </article>
+          <article class="service-card">
+            <span>05</span>
+            <h3>Tour Packages</h3>
+            <p>Planned leisure and business trips to popular regional and international cities.</p>
+          </article>
+          <article class="service-card">
+            <span>06</span>
+            <h3>Travel Consultation</h3>
+            <p>Practical advice for travel requirements, routes, budgets and trip readiness.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section destinations" id="destinations">
+        <div class="section-heading">
+          <p class="eyebrow">Destinations</p>
+          <h2>Popular routes for HIMDA travelers.</h2>
+        </div>
+        <div class="destination-grid">
+          <article style="--bg: linear-gradient(135deg, #0e6f9d, #d5a21d)">
+            <h3>Dubai</h3>
+            <p>Shopping, business and family travel.</p>
+          </article>
+          <article style="--bg: linear-gradient(135deg, #0b3c73, #c83c38)">
+            <h3>Turkey</h3>
+            <p>Medical, tourism and study routes.</p>
+          </article>
+          <article style="--bg: linear-gradient(135deg, #0f766e, #6fbf73)">
+            <h3>Malaysia</h3>
+            <p>Education, holidays and conferences.</p>
+          </article>
+          <article style="--bg: linear-gradient(135deg, #385d2f, #c9972b)">
+            <h3>Saudi Arabia</h3>
+            <p>Hajj, Umrah and family visits.</p>
+          </article>
+          <article style="--bg: linear-gradient(135deg, #111827, #b23b2d)">
+            <h3>Kenya</h3>
+            <p>Regional trips, business and transit.</p>
+          </article>
+          <article style="--bg: linear-gradient(135deg, #6b1238, #f2c94c)">
+            <h3>Qatar</h3>
+            <p>Work, transit and premium stays.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section testimonials" aria-label="Customer testimonials">
+        <div class="section-heading">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Good experiences from happy customers.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article>
+            <p>HIMDA handled my visa documents and flight booking quickly. The team kept me updated at every step.</p>
+            <strong>Amina Hassan</strong>
+            <span>Dubai traveler</span>
+          </article>
+          <article>
+            <p>Our Umrah trip was organized with care. Hotels, transport and support were all clear before we traveled.</p>
+            <strong>Abdirahman Ali</strong>
+            <span>Umrah package customer</span>
+          </article>
+          <article>
+            <p>I needed travel advice for Turkey and the consultation saved me time. Very professional service.</p>
+            <strong>Fadumo Mohamed</strong>
+            <span>Tour consultation</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Start planning your next journey.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div>
+              <span>Address</span>
+              <strong>Mogadishu, Somalia</strong>
+            </div>
+            <div>
+              <span>Phone</span>
+              <strong>+252 61 000 0000</strong>
+            </div>
+            <div>
+              <span>Email</span>
+              <strong>info@himdatravel.com</strong>
+            </div>
+            <div>
+              <span>Website</span>
+              <strong>www.himdatravel.com</strong>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Full name
+              <input name="name" type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Phone or email
+              <input name="contact" type="text" placeholder="How can we reach you?" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell us about your trip" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send Message</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>HIMDA Travel Agency</strong>
+        <p>Flights, visas, hotels, pilgrimage packages and travel consultation from Mogadishu.</p>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="#" aria-label="Facebook">Fb</a>
+        <a href="#" aria-label="Instagram">Ig</a>
+        <a href="#" aria-label="WhatsApp">Wa</a>
+      </div>
+      <p>Copyright <span id="year"></span> HIMDA Travel Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
